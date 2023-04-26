@@ -55,6 +55,7 @@
 - DB 및 컨트롤러 설계 
 - 프론트 업무 : 회원가입, 로그인, 아이디 찾기, 비밀번호 찾기 
 - 백엔드 업무 : 관리자 페이지
+- AWS 서버 배포 <a href="http://www.jimcarry.store/">jimcarry</a>
 
 ### 퍼블리싱 작업(회원가입/로그인) - <a href="https://github.com/code-hyun/JimCarry/wiki/맡은-기능-소개--(퍼블리싱)" > 상세보기 - WIKI 이동</a>
  1. 회원가입 <br>
