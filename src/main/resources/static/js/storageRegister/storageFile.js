@@ -29,6 +29,7 @@ $photoPicker.on("change", function () {
     }
 
     prevFileList = $files;
+
     $files.forEach(file => formData.append("file", file));
 
     $doAjax(uploadAjaxConfig(formData), (result) => {

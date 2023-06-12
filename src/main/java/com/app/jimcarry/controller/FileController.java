@@ -38,7 +38,7 @@ public class FileController {
     /*메인 이미지 파일*/
     @GetMapping("/display")
     public byte[] display(String fileName) throws IOException {
-        return FileCopyUtils.copyToByteArray(new File("C:/upload", fileName));
+        return FileCopyUtils.copyToByteArray(new File("/C:/upload", fileName));
     }
 
     // 파일 업로드

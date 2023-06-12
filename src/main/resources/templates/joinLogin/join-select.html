@@ -23,13 +23,13 @@
                     <div class="sns-buttons">
                         <div class="SnsLoginBtn">
                             <a href="https://kauth.kakao.com/oauth/authorize?client_id=f98c5a800722daf40b2e538f2766c211&redirect_uri=
-http://localhost:10000/user/kakao&response_type=code" class="flex-center-center btn" style="background-color: rgb(252, 232, 77);">
+http://www.jimcarry.site/user/kakao&response_type=code" class="flex-center-center btn" style="background-color: rgb(252, 232, 77);">
                                 <img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/icon_kakao.png" class="sns-img">
                                 <span style="font-size: 15px; color: rgb(51, 51, 51); border-color: rgb(51, 51, 51);">카카오톡 간편 가입 하기</span>
                             </a>
                         </div>
                         <div class="SnsLoginBtn">
-                            <a href="https://nid.naver.com/oauth2.0/authorize?response_type=token&amp;client_id=EVE2RFzPw29yZMdwRAx9&amp;redirect_uri=http%3A%2F%2Flocalhost%3A10000%2Fuser%2Fjoin&amp;state=9b601d34-3417-454f-ad52-7a80b7b08c4a" class="flex-center-center btn" style="background-color: rgb(99, 195, 61);" id="naver_id_login">
+                            <a href="https://nid.naver.com/oauth2.0/authorize?response_type=token&amp;client_id=EVE2RFzPw29yZMdwRAx9&amp;redirect_uri=http%3A%2F%2Fwww.jimcarry.site%2Fuser%2Fjoin&amp;state=9b601d34-3417-454f-ad52-7a80b7b08c4a" class="flex-center-center btn" style="background-color: rgb(99, 195, 61);" id="naver_id_login">
                                 <img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/icon_naver.png" class="sns-img">
                                 <span style="font-size: 15px; color: rgb(255, 255, 255); border-color: rgb(255, 255, 255);">네이버 간편 가입 하기</span>
                             </a>
@@ -49,10 +49,10 @@ http://localhost:10000/user/kakao&response_type=code" class="flex-center-center 
 <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script type="text/javascript">
-    var naver_id_login = new naver_id_login("EVE2RFzPw29yZMdwRAx9", "http://localhost:10000/user/join");
+    var naver_id_login = new naver_id_login("EVE2RFzPw29yZMdwRAx9", "http://www.jimcarry.site/user/join");
     var state = naver_id_login.getUniqState();
     naver_id_login.setButton("white", 2,40);
-    naver_id_login.setDomain("http://localhost:10000");
+    naver_id_login.setDomain("http://www.jimcarry.site");
     naver_id_login.setState(state);
     // naver_id_login.setPopup();
     // naver_id_login.init_naver_id_login();

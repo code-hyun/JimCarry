@@ -170,6 +170,10 @@ $checkAll.click(function () {
     if ($checkAll.is(':checked')) {
         $check.prop('checked', true);
         $check.each((i,e)=> {
+            var toRemove = $check.eq(i).parent().parent().next().text();
+            $checkArr = $checkArr.filter(function (item) {
+                return item !== toRemove;
+            });
             $checkArr.push($check.eq(i).parent().parent().next().text());
         });
     }

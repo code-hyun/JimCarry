@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Data
 public class FileVO {
-    public static final String ABSOLUTE_PATH = "C:/upload";
+    public static final String ABSOLUTE_PATH = "/C:/upload";
     private Long fileId;
     private String filePath;
     private String fileOrgName;
