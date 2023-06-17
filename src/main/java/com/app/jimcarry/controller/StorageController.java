@@ -40,7 +40,7 @@ public class StorageController {
     @GetMapping("register")
     public String register(Model model, HttpSession httpSession) {
         model.addAttribute("userId", userService.getUser(((UserVO)httpSession.getAttribute("user")).getUserId()));
-        return "/storageRegister/storageRegister"; }
+        return "storageRegister/storageRegister"; }
 
 
     /*창고등록*/
@@ -87,7 +87,7 @@ public class StorageController {
         model.addAttribute("pagination", pageDTO);
         model.addAttribute("storage", storageList);
 
-        return "/main/search-page";
+        return "main/search-page";
     }
 
 }

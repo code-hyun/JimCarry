@@ -8,17 +8,16 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-
 @Controller
-@RequestMapping("/main/*")
 @RequiredArgsConstructor
-public class MainController {
+public class GoMainController {
     private final StorageService storageService;
     private final ReviewService reviewService;
     private final StorageFileService storageFileService;
@@ -34,10 +33,10 @@ public class MainController {
             storageDTO.setFiles(storageFileService.getByStorageId(storageDTO.getStorageId()));
         }
 
-         /*모든 storage 정보를 가져오는데 사용되는 storageService를 통해 리뷰 정보를 가져온다.*/
+        /*모든 storage 정보를 가져오는데 사용되는 storageService를 통해 리뷰 정보를 가져온다.*/
         List<StorageDTO> reviewDTOs = storageService.getStorage();
 
-         /*가져온 reviewDTOs 리스트를 순회하며, 해당 storageDTO에 해당하는 모든 파일 정보를 가져와 files 리스트에 저장한다.*/
+        /*가져온 reviewDTOs 리스트를 순회하며, 해당 storageDTO에 해당하는 모든 파일 정보를 가져와 files 리스트에 저장한다.*/
         for(StorageDTO storageDTO: reviewDTOs){
             storageDTO.setFiles(storageFileService.getByStorageId(storageDTO.getStorageId()));
         }

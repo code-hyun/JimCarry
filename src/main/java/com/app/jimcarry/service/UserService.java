@@ -168,22 +168,22 @@ public class UserService {
 
 //      랜덤 숫자 뽑아서 문자 메세지 전송
     public String sendRandomNumber(String userPhone) throws CoolsmsException {
-//        String api_key = "NCSW9JM1RREOSKPR";
-//        String api_secret = "CWPWKNOLA3D0FD94JOY4W6Q2SBYXVSOK";
-//        Message coolsms = new Message(api_key, api_secret);
+        String api_key = "NCSW9JM1RREOSKPR";
+        String api_secret = "CWPWKNOLA3D0FD94JOY4W6Q2SBYXVSOK";
+        Message coolsms = new Message(api_key, api_secret);
 
         String numStr = randomKey();
 
 //        회원가입에서 -가 붙어서 오기 때문에 떼어주는것
         userPhone = userPhone.replace("-", "");
 
-//        HashMap<String, String> params = new HashMap<String, String>();
-//        params.put("to", userPhone);    // 수신전화번호 (ajax로 view 화면에서 받아온 값으로 넘김)
-//        params.put("from", "01022876873");    // 발신전화번호. 테스트시에는 발신,수신 둘다 본인 번호로 하면 됨
-//        params.put("type", "sms");
-//        params.put("text", "인증번호는 [" + numStr + "] 입니다.");
-//
-//        coolsms.send(params); // 메시지 전송
+        HashMap<String, String> params = new HashMap<String, String>();
+        params.put("to", userPhone);    // 수신전화번호 (ajax로 view 화면에서 받아온 값으로 넘김)
+        params.put("from", "01022876873");    // 발신전화번호. 테스트시에는 발신,수신 둘다 본인 번호로 하면 됨
+        params.put("type", "sms");
+        params.put("text", "인증번호는 [" + numStr + "] 입니다.");
+
+        coolsms.send(params); // 메시지 전송
 
         return numStr;
     }
@@ -260,10 +260,10 @@ public class UserService {
 
 //            회원가입에서 접근했을 때
             if(type.equals("join")) {
-                sb.append("&redirect_uri=http://localhost:10000/user/kakao"); // TODO 인가코드 받은 redirect_uri 입력
+                sb.append("&redirect_uri=http://www.jimcarry.site/user/kakao"); // TODO 인가코드 받은 redirect_uri 입력
             } else if (type.equals("login")) {
 //            로그인에서 접근했을 때
-                sb.append("&redirect_uri=http://localhost:10000/user/kakao-login"); // TODO 인가코드 받은 redirect_uri 입력
+                sb.append("&redirect_uri=http://www.jimcarry.site/user/kakao-login"); // TODO 인가코드 받은 redirect_uri 입력
             }
             sb.append("&code=" + code);
             bw.write(sb.toString());

@@ -38,18 +38,18 @@ public class NoticeController {
     private final InquiryFileVO inquiryFileVO;
 
     @GetMapping("faq")
-    public String faq() { return "/notice/faq";}
+    public String faq() { return "notice/faq";}
 
     @GetMapping("detail/{noticeId}")
     public String detail(@PathVariable("noticeId") Long noticeId, Model model) {
         model.addAttribute("notice", noticeService.getNotice(noticeId));
 
-        return "/notice/notice-detail";}
+        return "notice/notice-detail";}
 
   /*  @GetMapping("detail")
     public String detail() {
 
-        return "/notice/notice-detail";}*/
+        return "notice/notice-detail";}*/
 
     @GetMapping("list")
     public String list(Criteria criteria, Model model){
@@ -75,7 +75,7 @@ public class NoticeController {
         model.addAttribute("totalNotice", noticeService.getTotal());
 
 
-        return "/notice/notice-list";
+        return "notice/notice-list";
     }
 
     @GetMapping("write")
@@ -83,7 +83,7 @@ public class NoticeController {
         model.addAttribute("userPhone", userService.getUser(((UserVO)httpSession.getAttribute("user")).getUserId()).getUserPhone());
         model.addAttribute("userId", userService.getUser(((UserVO)httpSession.getAttribute("user")).getUserId()));
 
-        return "/notice/qna-write";}
+        return "notice/qna-write";}
 
     /*파일 업로드 포함*/
     @PostMapping("write")
@@ -103,7 +103,7 @@ public class NoticeController {
     }
 
     @GetMapping("info")
-    public String info() { return "/notice/service-use-info";}
+    public String info() { return "notice/service-use-Info";}
 
 
 }

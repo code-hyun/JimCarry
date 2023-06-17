@@ -130,7 +130,7 @@ public class SearchController {
 //        model.addAttribute("reviewFile", reviewFileService.getListByStorageId(storageId));
 
 
-        return "/detail-info/detail-info";
+        return "detail-info/detail-info";
     }
     
     /* 창고 검색 */
@@ -176,7 +176,7 @@ public class SearchController {
     @GetMapping("files/display")
     @ResponseBody
     public byte[] display(String fileName) throws IOException {
-        return FileCopyUtils.copyToByteArray(new File("C:/upload", fileName));
+        return FileCopyUtils.copyToByteArray(new File("/C:/upload", fileName));
     }
 
     /*dto set*/

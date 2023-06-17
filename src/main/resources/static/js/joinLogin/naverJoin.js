@@ -1,4 +1,4 @@
-var naver_id_login = new naver_id_login("EVE2RFzPw29yZMdwRAx9", "http://localhost:10000/main/");
+var naver_id_login = new naver_id_login("EVE2RFzPw29yZMdwRAx9", "http://52.79.90.95:10000/main/");
 // 접근 토큰 값 출력
 naver_id_login.oauthParams.access_token;
 // 네이버 사용자 프로필 조회

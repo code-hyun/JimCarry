@@ -57,7 +57,7 @@ public class AdminController {
         model.addAttribute("pagination", pageDTO);
         model.addAttribute("searchDTO", searchDTO);
 
-        return "/admin/user";
+        return "admin/user";
     }
 
 
@@ -90,7 +90,7 @@ public class AdminController {
         model.addAttribute("searchDTO", searchDTO);
         model.addAttribute("condition", condition);
         model.addAttribute("search", search);
-        return "/admin/user";
+        return "admin/user";
     }
 
     /*======================== 문의 관리 ==========================*/
@@ -124,7 +124,7 @@ public class AdminController {
         model.addAttribute("inquiries", inquiryService.getDTOListBy(pageDTO));
         model.addAttribute("pagination", pageDTO);
         model.addAttribute("searchDTO", searchDTO);
-        return "/admin/enquiry";
+        return "admin/enquiry";
     }
 
 
@@ -168,7 +168,7 @@ public class AdminController {
         model.addAttribute("searchDTO", searchDTO);
         model.addAttribute("condition", condition);
         model.addAttribute("search", search);
-        return "/admin/enquiry";
+        return "admin/enquiry";
     }
 
 
@@ -194,7 +194,7 @@ public class AdminController {
         model.addAttribute("pagination", pageDTO);
         model.addAttribute("searchDTO", searchDTO);
 
-        return "/admin/notice";
+        return "admin/notice";
     }
 
     /*======== 검색 조건, 페이징 처리 ========*/
@@ -224,7 +224,7 @@ public class AdminController {
         model.addAttribute("searchDTO", searchDTO);
         model.addAttribute("condition", condition);
         model.addAttribute("search", search);
-        return "/admin/notice";
+        return "admin/notice";
     }
 
     /*======== 공지사항 수정 ========*/
@@ -268,7 +268,7 @@ public class AdminController {
         model.addAttribute("pagination", pageDTO);
         model.addAttribute("searchDTO", searchDTO);
 
-        return "/admin/payment";
+        return "admin/payment";
     }
 
     /*======== 검색 조건, 페이징 처리 ========*/
@@ -300,7 +300,7 @@ public class AdminController {
         model.addAttribute("condition", condition);
         model.addAttribute("search", search);
 
-        return "/admin/payment";
+        return "admin/payment";
     }
 
     /*======================== 리뷰 관리 ==========================*/
@@ -325,7 +325,7 @@ public class AdminController {
         model.addAttribute("pagination", pageDTO);
         model.addAttribute("searchDTO", searchDTO);
 
-        return "/admin/review";
+        return "admin/review";
     }
 
     /*======== 검색 조건, 페이징 처리 ========*/
@@ -354,7 +354,7 @@ public class AdminController {
         model.addAttribute("search", search);
         model.addAttribute("searchDTO", searchDTO);
 
-        return "/admin/review";
+        return "admin/review";
     }
     /*======== 리뷰 수정 ========*/
     @PostMapping("review/update")
@@ -390,7 +390,7 @@ public class AdminController {
         model.addAttribute("pagination", pageDTO);
         model.addAttribute("searchDTO", searchDTO);
 
-        return "/admin/storage";
+        return "admin/storage";
     }
 
     /*======== 창고 수정 ========*/
@@ -451,7 +451,7 @@ public class AdminController {
         model.addAttribute("searchDTO", searchDTO);
         model.addAttribute("condition", condition);
         model.addAttribute("search", search);
-        return "/admin/storage";
+        return "admin/storage";
     }
 }
 

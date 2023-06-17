@@ -44,12 +44,12 @@
                         <div class="sns">
                             <div class="sns-img" style="margin-right: 20px;">
                                 <a href="https://kauth.kakao.com/oauth/authorize?client_id=f98c5a800722daf40b2e538f2766c211&redirect_uri=
-http://localhost:10000/user/kakao-login&response_type=code&loginType=kakao">
+http://www.jimcarry.site/user/kakao-login&response_type=code&loginType=kakao">
                                     <img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/icon_kakao.png" alt="sns아이콘" class="kakao-img">
                                 </a>
                             </div>
                             <div class="sns-img" id="naver_id_login">
-                                <a href="https://nid.naver.com/oauth2.0/authorize?response_type=token&amp;client_id=EVE2RFzPw29yZMdwRAx9&amp;redirect_uri=http%3A%2F%2Flocalhost%3A10000%2Fuser%2Flogin&amp;state=bc5e584c-1afd-45db-bd48-0223442c26ba" id="naver_id_login_anchor">
+                                <a href="https://nid.naver.com/oauth2.0/authorize?response_type=token&amp;client_id=EVE2RFzPw29yZMdwRAx9&amp;redirect_uri=http%3A%2F%2Fwww.jimcarry.site%2Fuser%2Flogin&amp;state=bc5e584c-1afd-45db-bd48-0223442c26ba" id="naver_id_login_anchor">
                                     <img src="https://d2v80xjmx68n4w.cloudfront.net/assets/icon/icon_naver.png" alt="sns아이콘" class="naver-img">
                                 </a>
                             </div>
@@ -95,10 +95,10 @@ http://localhost:10000/user/kakao-login&response_type=code&loginType=kakao">
 <script src="/js/main/header.js"></script>
 <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
 <script type="text/javascript">
-    var naver_id_login = new naver_id_login("EVE2RFzPw29yZMdwRAx9", "http://localhost:10000/user/login");
+    var naver_id_login = new naver_id_login("EVE2RFzPw29yZMdwRAx9", "http://www.jimcarry.site/user/login");
     var state = naver_id_login.getUniqState();
     naver_id_login.setButton("white", 2,40);
-    naver_id_login.setDomain("http://localhost:10000");
+    naver_id_login.setDomain("http://www.jimcarry.site");
     naver_id_login.setState(state);
     // naver_id_login.setPopup();
     // naver_id_login.init_naver_id_login();

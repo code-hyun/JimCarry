@@ -35,7 +35,7 @@ public class PayController {
         model.addAttribute("file", storageFileService.getByStorageId(storageId));
 
         /*pay/payment.html 뷰 페이지를 반환한다.*/
-        return "/pay/payment";
+        return "pay/payment";
     }
 
     @GetMapping("/pay-reserve")
@@ -48,7 +48,7 @@ public class PayController {
         model.addAttribute("paymentAmount", paymentAmount);
 
         /*pay/pay-reserve.html 뷰 페이지를 반환한다.*/
-        return "/pay/pay-reserve";
+        return "pay/pay-reserve";
     }
 
     /* 해당 메서드는 POST 방식으로 "/payRegister" 경로로 요청이 들어왔을 때 실행된다.
@@ -66,7 +66,7 @@ public class PayController {
         paymentService.register(paymentVO);
 
         /*"/pay/pay-reserve?paymentAmount=" + paymentAmount 경로로 리다이렉트한다.*/
-        return "/pay/pay-reserve?paymentAmount=" + paymentAmount;
+        return "pay/pay-reserve?paymentAmount=" + paymentAmount;
     }
 
 }

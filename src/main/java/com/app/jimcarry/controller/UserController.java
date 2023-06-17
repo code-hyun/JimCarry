@@ -27,19 +27,19 @@ public class UserController {
 //    회원가입 페이지 이동
     @GetMapping("join")
     public String join() {
-        return "/joinLogin/joinForm";
+        return "joinLogin/joinForm";
     }
 
 //    카카오, 네이버, 일반 회원가입 선택 페이지 이동
     @GetMapping("join-select")
     public String joinSelect() {
-        return "/joinLogin/join-select";
+        return "joinLogin/join-select";
     }
 
 //    네이버 회원가입 콜백 페이지로 이동
     @GetMapping("callback")
     public String callback() {
-        return "/joinLogin/callback";
+        return "joinLogin/callback";
     }
 
 //    일반 회원가입 페이지로 이동
@@ -53,7 +53,7 @@ public class UserController {
 //    로그인 페이지로 이동
     @GetMapping("login")
     public String login() {
-        return "/joinLogin/login";
+        return "joinLogin/login";
     }
 
 //    로그인
@@ -92,7 +92,7 @@ public class UserController {
 
     @GetMapping("find-id-phone")
     public String findIdPhone() {
-        return "/joinLogin/find-id-phone";
+        return "joinLogin/find-id-phone";
     }
 
     @PostMapping("find-id-phone")
@@ -111,12 +111,12 @@ public class UserController {
 
     @GetMapping("find-id-result")
     public String findIdResult() {
-        return "/joinLogin/find-id-result";
+        return "joinLogin/find-id-result";
     }
 
     @GetMapping("find-id-email")
     public String findIdEmail() {
-        return "/joinLogin/find-id-email";
+        return "joinLogin/find-id-email";
     }
 
     @PostMapping("find-id-email")
@@ -134,7 +134,7 @@ public class UserController {
 
     @GetMapping("find-password-phone")
     public String findPasswordPhone() {
-        return "/joinLogin/find-password-phone";
+        return "joinLogin/find-password-phone";
     }
 
     @PostMapping("find-password-phone")
@@ -156,7 +156,7 @@ public class UserController {
 
     @GetMapping("find-password-email")
     public String findPasswordEmail() {
-        return "/joinLogin/find-password-email";
+        return "joinLogin/find-password-email";
     }
 
     @GetMapping("changePassword")
@@ -166,7 +166,7 @@ public class UserController {
         }
 
         userService.updateUserRandomKey(userIdentification, null);
-        return "/joinLogin/changePassword";
+        return "joinLogin/changePassword";
     }
 
     @PostMapping("changePassword")
@@ -177,7 +177,7 @@ public class UserController {
 
     @GetMapping("find-password-emailsend")
     public String findPasswordEmailSend() {
-        return "/joinLogin/find-password-emailsend";
+        return "joinLogin/find-password-emailsend";
     }
 
     @PostMapping("find-password-email")
@@ -197,7 +197,7 @@ public class UserController {
         MailTO mailTO = new MailTO();
         mailTO.setAddress(userEmail);
         mailTO.setTitle("새 비밀번호 설정 링크입니다.");
-        mailTO.setMessage("링크: http://localhost:10000/user/changePassword?userIdentification=" + userIdentification + "&userRandomKey=" + randomKey);
+        mailTO.setMessage("링크: http://www.jimcarry.site/user/changePassword?userIdentification=" + userIdentification + "&userRandomKey=" + randomKey);
         userService.sendMail(mailTO);
 
         redirectAttributes.addFlashAttribute("userEmail", userEmail);

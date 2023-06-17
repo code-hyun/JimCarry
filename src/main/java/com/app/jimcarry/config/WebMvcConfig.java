@@ -4,6 +4,7 @@ import com.app.jimcarry.intercepter.AuthInterceptor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
@@ -23,5 +24,12 @@ public class WebMvcConfig implements WebMvcConfigurer {
                         "/main",
                         "/storages/register", "/pay/payment", "/notice/write");
 //                .excludePathPatterns("/login/**"); // 제외할 URL 패턴
+    }
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/upload/**")
+                .addResourceLocations("file:///C:/upload/");
+//                .addResourceLocations("file:/C:/upload/");
     }
 }
